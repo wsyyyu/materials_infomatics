@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction to Materials Informatics &#8212; Materials Informatics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'orientation/introduction';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Orientation" href="orientation.html" />
+    <link rel="prev" title="Instructor" href="instructor.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">👷‍♂️ As we are just launching this course, the content keeps updating! Please check back regularly for updates.</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Materials Informatics - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Materials Informatics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Orientation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="slides.html">Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instructor.html">Instructor</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to Materials Informatics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orientation.html">Orientation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Open-Source Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Practical: Setup Programming Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming.html">Practical: Python Programming using VS Code and Jupyter Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/orientation/introduction.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction to Materials Informatics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-driven-applications">Data-Driven Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bioinformatics">Bioinformatics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-dna-sequencing">Example: DNA Sequencing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-protein-structure-prediction">Example: Protein Structure Prediction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-wave-in-ai4science">Big Wave in AI4Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materials-informatics">Materials Informatics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-materials-informatics">Why Materials Informatics?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">Where are we?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#materials-genome-initiative-and-other-efforts">Materials Genome Initiative and Other Efforts</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-materials-informatics">
+<h1>Introduction to Materials Informatics<a class="headerlink" href="#introduction-to-materials-informatics" title="Link to this heading">#</a></h1>
+<p>Materials informatics is an emerging field that combines materials science and engineering with data science, machine learning, and artificial intelligence techniques. Its primary goal is to use data-driven approaches to accelerate the discovery, development, and optimization of new materials by leveraging large datasets and advanced computational methods.</p>
+<section id="data-driven-applications">
+<h2>Data-Driven Applications<a class="headerlink" href="#data-driven-applications" title="Link to this heading">#</a></h2>
+<p>Data-driven applications are ubiquitous in today’s world. Initially, they were employed to identify spam emails and recognize handwriting. Over time, their use has expanded to include voice and pattern recognition, as well as personalized recommendation systems in e-commerce and social media. More recently, data-driven approaches have been applied to autonomous self-driving vehicles, generative AI, and medical applications. These advancements demonstrate the versatility and transformative potential of data-driven methods across various domains.</p>
+<figure class="align-default" id="directive-fig">
+<a class="reference internal image-reference" href="../_images/data_driven.png"><img alt="../_images/data_driven.png" src="../_images/data_driven.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Some examples using data-driven applications.</span><a class="headerlink" href="#directive-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="bioinformatics">
+<h2>Bioinformatics<a class="headerlink" href="#bioinformatics" title="Link to this heading">#</a></h2>
+<p>Prior the advent of materials informatics, in the field of molecular biology, bioinformatics has been actively developed since 2000, which is a hybrid science that links biological data with techniques for information storage, distribution, and analysis to support multiple areas of scientific research, including biomedicine. Bioinformatics uses high-throughput experimental data which involves DNA and protein sequencing, and gene expression patterns. Many databases were generated, including DNA sequences of gene or full genomes, amino acid sequences of proteins, and 3D complex structure of proteins, nucleic acids and protein–nucleic acid complexes.</p>
+<div class="info admonition">
+<p class="admonition-title">Definition</p>
+<p>Bioinformatics applies “informatics techniques” (derived from disciplines such as applied maths, computer science and statistics) to understand and organise the information associated with these molecules, on a large scale.</p>
+</div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/bioinformatics.png"><img alt="../_images/bioinformatics.png" src="../_images/bioinformatics.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Two examples of using bioinformatics: DNA sequencing and AlphaFold.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="example-dna-sequencing">
+<h3>Example: DNA Sequencing<a class="headerlink" href="#example-dna-sequencing" title="Link to this heading">#</a></h3>
+<p>DNA sequencing determines the order of the building blocks (bases) of DNA, which are paired as Adenine (A) with Thymine (T) and Cytosine (C) with Guanine (G). The human genome consists of approximately 3 billion base pairs. DNA sequencing began in the 1970s with manual methods, but now some laboratories can sequence up to 100,000 billion bases per year. This technology is crucial for detecting and treating diseases, such as selecting better treatment methods for cancer patients by analyzing sequence data and comparing healthy and mutated sequences to identify diseases. A significant milestone in this field was the Human Genome Project, initiated in the 1990s.</p>
+</section>
+<section id="example-protein-structure-prediction">
+<h3>Example: Protein Structure Prediction<a class="headerlink" href="#example-protein-structure-prediction" title="Link to this heading">#</a></h3>
+<p>Protein structure prediction has traditionally been a challenging and time-consuming task. Determining protein structures using methods like X-ray crystallography or Cryo-EM can take months or even years, depending on the quality of the protein crystal samples. This process is not only lengthy but also costly in terms of materials and manpower, and the resulting database of known protein structures is limited to around 100,000 entries. However, the advent of AlphaFold has revolutionized this field. AlphaFold can predict protein structures in a matter of minutes or hours on a GPU, depending on the length of the protein sequence, and it provides results at atomistic resolution. This breakthrough significantly accelerates research and opens up new possibilities in understanding and treating diseases.</p>
+</section>
+</section>
+<section id="big-wave-in-ai4science">
+<h2>Big Wave in AI4Science<a class="headerlink" href="#big-wave-in-ai4science" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/nobel_prize.png"><img alt="../_images/nobel_prize.png" src="../_images/nobel_prize.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Both Nobel prize in Physics and Chemistry are given to the development of AI-driven reserach.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The rise of AI for science has been marked by significant milestones, culminating in the awarding of the Nobel Prize in 2024 for AI-driven research in fields such as physics and chemistry. Notable contributions include the development of artificial neural networks by pioneers like Hopfield and Hinton, as well as groundbreaking advancements in protein structure prediction by researchers such as Baker, Hassabis, and Jumper. These achievements underscore the transformative impact of machine learning and artificial intelligence on scientific discovery and innovation, heralding a new era of accelerated research and development across various scientific disciplines.</p>
+</section>
+<section id="materials-informatics">
+<h2>Materials Informatics<a class="headerlink" href="#materials-informatics" title="Link to this heading">#</a></h2>
+<p>The study of materials informatics is crucial due to its potential to revolutionize the way we discover, develop, and optimize new materials. Combining the power of data science and advanced computational methods, this field holds the key to faster innovation, cost savings, and solutions to critical global challenges. As governments continue to invest in materials informatics research and development, it is clear that this interdisciplinary approach will play an increasingly important role in driving progress across various sectors of society.</p>
+<div class="info admonition">
+<p class="admonition-title">Definition</p>
+<p>Materials informatics employs techniques, tools, and theories drawn from the emerging fields of data science, internet, computer science and engineering, and digital technologies to the materials science and engineering to accelerate materials, products and manufacturing innovations.</p>
+</div>
+<section id="why-materials-informatics">
+<h3>Why Materials Informatics?<a class="headerlink" href="#why-materials-informatics" title="Link to this heading">#</a></h3>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/battery_history.png"><img alt="../_images/battery_history.png" src="../_images/battery_history.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">It usually takes 10-20 years from initial research to real application, take Li-ion battery as an example.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Materials discovery is a complex, expensive, and time-consuming process, often taking 10-20 years from initial research to real-world application. For example, the development of the Li-ion battery, which earned Goodenough, Whittingham, and Yoshino the Nobel Prize in Chemistry in 2019, began with Whittingham’s work on the first rechargeable Li-ion battery using <span class="math notranslate nohighlight">\(\ce{LiTiS2}\)</span> in 1976. Goodenough’s discovery of <span class="math notranslate nohighlight">\(\ce{LiCoO2}\)</span> as a cathode material in the 1980s and Yoshino’s use of graphite as an anode material in 1985 led to the modern rechargeable battery. It wasn’t until 1991 that Sony and Asahi Kasei commercialized the first Li-ion battery. Despite General Motors introducing the first electric vehicle in 1966, it took decades for electric vehicles to become widespread, with companies like Tesla and BYD leading the charge in recent years. This lengthy timeline underscores the need for materials informatics to accelerate the development of high-performance materials, reducing costs and speeding up innovation.</p>
+</section>
+<section id="where-are-we">
+<h3>Where are we?<a class="headerlink" href="#where-are-we" title="Link to this heading">#</a></h3>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/wherearewe.png"><img alt="../_images/wherearewe.png" src="../_images/wherearewe.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">The location of Materials Informatics.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When studying the introduction to materials science, you will encounter the materials tetrahedron, which consists of structure, property, performance, process &amp; synthesis, with characterization and modeling at the center. Materials informatics falls under the modeling category.</p>
+<p>In the Venn diagram, materials informatics is at the intersection of materials science (our domain knowledge), mathematics &amp; statistics (e.g., linear algebra, statistics, numerical methods), and computer science (programming, algorithms, computation). This field overlaps with traditional research, computational materials science, and machine learning, but it emphasizes data-driven methods like machine learning and statistics, leveraging large databases.</p>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/MGI.png"><img alt="../_images/MGI.png" src="../_images/MGI.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">The overview of Materials Genome Initiative.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="materials-genome-initiative-and-other-efforts">
+<h3>Materials Genome Initiative and Other Efforts<a class="headerlink" href="#materials-genome-initiative-and-other-efforts" title="Link to this heading">#</a></h3>
+<p>Similar to the Human Genome Project, the <a class="reference external" href="https://www.mgi.gov/">Materials Genome Initiative</a> was launched to meet critical needs in human welfare, clean energy, workforce development, and national security. This federal multi-agency initiative aims to discover, manufacture, and deploy advanced materials twice as fast and at a fraction of the cost of traditional methods. The MGI periodically releases strategic plans to guide materials informatics research in the USA.</p>
+<p>The table below highlights various examples and efforts in materials informatics globally. Many of these resources are publicly available and can be freely used for materials selection and development. One of the most widely used computational databases is the Materials Project (MP), developed by Lawrence Berkeley National Laboratory, which will be utilized in this course.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/a-lab.png"><img alt="../_images/a-lab.png" src="../_images/a-lab.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Berkeley A-lab: Robots operate instruments and artificial intelligence makes decisions to find useful new materials at the A-Lab.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Current state-of-the-art research in materials informatics includes <a class="reference external" href="https://www.nature.com/articles/s41586-023-06734-w">Berkeley A-Lab</a>, a self-driving laboratory that integrates automation and robotics for materials synthesis. Guided by machine learning predictions, this system not only accelerates the discovery process but also incorporates experimental data into a reinforcement learning framework, enabling continuous optimization. Another notable development is <a class="reference external" href="https://github.com/google-deepmind/materials_discovery">GNoME from Google DeepMind</a>, which has reportedly identified over 400,000 new materials using advanced machine learning models. This far surpasses the approximately 20,000 materials discovered through human experimentation and the 48,000 materials identified via traditional computational methods, highlighting the transformative potential of AI-driven approaches in expanding the frontiers of materials discovery.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "dengzeyu/MLE4217_5219_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./orientation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="instructor.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Instructor</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="orientation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Orientation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-driven-applications">Data-Driven Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bioinformatics">Bioinformatics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-dna-sequencing">Example: DNA Sequencing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-protein-structure-prediction">Example: Protein Structure Prediction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-wave-in-ai4science">Big Wave in AI4Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materials-informatics">Materials Informatics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-materials-informatics">Why Materials Informatics?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">Where are we?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#materials-genome-initiative-and-other-efforts">Materials Genome Initiative and Other Efforts</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
+| © Copyright 2025 Zeyu Deng | <a href='https://matsci.dev'>DENG Group</a>
+</br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

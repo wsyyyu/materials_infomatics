@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Open-Source Software &#8212; Materials Informatics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'orientation/github';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Practical: Setup Programming Environment" href="setup.html" />
+    <link rel="prev" title="Orientation" href="orientation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">👷‍♂️ As we are just launching this course, the content keeps updating! Please check back regularly for updates.</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Materials Informatics - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Materials Informatics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Orientation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="slides.html">Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instructor.html">Instructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Materials Informatics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orientation.html">Orientation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Open-Source Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Practical: Setup Programming Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming.html">Practical: Python Programming using VS Code and Jupyter Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/orientation/github.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Open-Source Software</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-software-license">Open-Source Software License</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mit-license">MIT License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bsd-license">BSD License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpl-license">GPL License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apache-license">Apache License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creative-commons">Creative Commons</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-github">Git and GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-workflow">GitHub Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repositories">Repositories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additinal-files-in-a-repositories">Additinal Files in a Repositories</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#committing-and-pushing">Committing and pushing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">Branch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forks">Forks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">Issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-user-profile">Your User Profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engaging-with-the-github-community">Engaging with the GitHub community</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starring-repositories">Starring repositories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#following-users">Following users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browsing-github-explore">Browsing GitHub Explore</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="open-source-software">
+<h1>Open-Source Software<a class="headerlink" href="#open-source-software" title="Link to this heading">#</a></h1>
+<figure class="align-default" id="directive-fig">
+<a class="reference internal image-reference" href="../_images/opensource.png"><img alt="../_images/opensource.png" src="../_images/opensource.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Various of open-source softwares, including some famous projects: Linux, Android that powers most of the mobile phones and servers nowadays.</span><a class="headerlink" href="#directive-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Open-source software (OSS) is software with source code that anyone can inspect, modify, and enhance. Distributed under licenses that comply with the Open Source Definition, OSS allows users to use, change, and share the software freely. The benefits of using OSS include cost-effectiveness, flexibility, security, vendor independence, and community support. Many OSS options are free, making them budget-friendly, and the availability of source code allows for customization to meet specific needs. The open nature of OSS means that security issues can be quickly identified and resolved by the community. Additionally, users are not tied to a single vendor, providing more freedom in software choices. Active communities often support OSS projects, offering updates and improvements. Contributing to OSS can enhance your skills, build your portfolio, and expand your professional network, providing valuable experience and career growth opportunities.</p>
+<section id="open-source-software-license">
+<h2>Open-Source Software License<a class="headerlink" href="#open-source-software-license" title="Link to this heading">#</a></h2>
+<p>A software license is a legal instrument that governs the use, modification, and redistribution of software. It defines the rights and responsibilities of the users and developers, ensuring that the software is used in a manner consistent with the author’s intentions. Here are some commonly used open-source licenses:</p>
+<section id="mit-license">
+<h3>MIT License<a class="headerlink" href="#mit-license" title="Link to this heading">#</a></h3>
+<p>The MIT License is a permissive license that allows users to do almost anything with the software, as long as they include the original copyright and license notice in any copies or substantial portions of the software. It is simple and concise, making it a popular choice for many open-source projects.</p>
+</section>
+<section id="bsd-license">
+<h3>BSD License<a class="headerlink" href="#bsd-license" title="Link to this heading">#</a></h3>
+<p>The BSD License is another permissive license similar to the MIT License. It allows for redistribution and use in source and binary forms, with or without modification, provided that certain conditions are met. The BSD License is known for its simplicity and compatibility with other licenses.</p>
+</section>
+<section id="gpl-license">
+<h3>GPL License<a class="headerlink" href="#gpl-license" title="Link to this heading">#</a></h3>
+<p>The GNU General Public License (GPL) is a copyleft license that requires any derivative work to be distributed under the same license. This means that if you modify and distribute the software, you must also provide the source code and allow others to use, modify, and distribute it under the same terms. The GPL ensures that the software remains free and open for all users.</p>
+</section>
+<section id="apache-license">
+<h3>Apache License<a class="headerlink" href="#apache-license" title="Link to this heading">#</a></h3>
+<p>The Apache License is a permissive license similar to the MIT License but with additional terms and conditions. It provides an express grant of patent rights from contributors to users, which helps protect users from patent litigation. The Apache License is often used for projects that require a more comprehensive legal framework.</p>
+</section>
+<section id="creative-commons">
+<h3>Creative Commons<a class="headerlink" href="#creative-commons" title="Link to this heading">#</a></h3>
+<p>Creative Commons licenses are not typically used for software but are common for other types of creative works, such as documentation, images, and videos. These licenses allow creators to specify the permissions and restrictions for using their work, ranging from allowing any use with attribution to more restrictive licenses that limit commercial use or derivative works.</p>
+<p>Including a LICENSE file in your repository is crucial as it clarifies the legal terms under which your project’s code can be used, modified, and distributed. It helps protect both the authors and users by clearly defining the rights and obligations associated with the software.</p>
+</section>
+</section>
+<section id="git-and-github">
+<h2>Git and GitHub<a class="headerlink" href="#git-and-github" title="Link to this heading">#</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Sign up for GitHub</p>
+<p>GitHub will be used and in this course. Please sign up if you don’t have a GitHub account <a class="github reference external" href="https://github.com/signup">signup</a></p>
+</div>
+<p>Git is a <strong>distributed Version Control System (VCS)</strong>, which enables easy tracking of code changes, collaboration, and sharing. With Git, you can maintain a record of your project’s progress and revert to previous versions if necessary. It also simplifies collaboration among groups of individuals, allowing them to merge their changes into a single final source.</p>
+<p>GitHub is the hosting platform for your repository. It’s widely used across various software industries and beyond for collaboration and project history management. Other platforms includes GitLab and Bitbucket.</p>
+</section>
+<section id="github-workflow">
+<h2>GitHub Workflow<a class="headerlink" href="#github-workflow" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/git_workflow.png"><img alt="../_images/git_workflow.png" src="../_images/git_workflow.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">GitHub workflow.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The GitHub flow is a lightweight workflow that facilitates experimentation and collaboration on projects without the risk of losing previous work.</p>
+<section id="repositories">
+<h3>Repositories<a class="headerlink" href="#repositories" title="Link to this heading">#</a></h3>
+<p>A repository serves as the repository for your project’s work—think of it as your project folder. It encompasses all your project’s files and revision history. You can work within a repository independently or invite others to collaborate on specific files.</p>
+<p>When you create a repository on GitHub, it is stored remotely in the cloud. To work on it locally, you can clone the repository using Git. This allows you to fix issues, manage files, and push changes using your preferred tools. Cloning retrieves all the repository data, including all versions of files and folders, which is useful for experimenting and reverting to previous versions if needed.</p>
+<ul class="simple">
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone a repo to your local directory.</p></li>
+</ul>
+</section>
+<section id="additinal-files-in-a-repositories">
+<h3>Additinal Files in a Repositories<a class="headerlink" href="#additinal-files-in-a-repositories" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code>: Repositories also contain <strong>README</strong> files. A README explains your project’s purpose, usage instructions, and other relevant information. This README guides you through learning Git and GitHub. 😄</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.git</span></code>: This directory contains all the metadata for the repository, including the history, configuration, and the objects that make up the content of the repository. It is created when you initialize a new Git repository and should not be modified manually.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>: This file specifies which files and directories should be ignored by Git. It is used to avoid committing temporary files, build artifacts, and other files that are not necessary to include in the repository.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SECURITY.md</span></code>: This file provides information about the security policies of the project, including how to report vulnerabilities and security issues. It is used to ensure that users and contributors know how to handle security-related matters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>: This file contains the legal terms under which the project’s code can be used, modified, and distributed. It is important to include a LICENSE file to clarify the permissions and limitations associated with the project’s code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.github</span></code>: This directory contains configuration files for GitHub-specific features, such as issue templates, pull request templates, and workflows for GitHub Actions. It helps standardize and automate repository management tasks.</p></li>
+</ul>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/git_commands.png"><img alt="../_images/git_commands.png" src="../_images/git_commands.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Some git commands.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="committing-and-pushing">
+<h2>Committing and pushing<a class="headerlink" href="#committing-and-pushing" title="Link to this heading">#</a></h2>
+<p><strong>Committing</strong> and <strong>pushing</strong> are the steps to add changes from your local machine to the remote GitHub repository. Create a commit to “checkpoint” your changes, and add a <em>meaningful</em> <strong>commit message</strong> to describe the work (e.g., “Added README”). Use the push command to update the remote repository with your commits. These steps may seem unfamiliar initially, but you’ll get used to them!</p>
+</section>
+<section id="branch">
+<h2>Branch<a class="headerlink" href="#branch" title="Link to this heading">#</a></h2>
+<p>Branches on GitHub allow you to isolate work that you don’t want to merge into your main project yet. They are useful for developing features, fixing bugs, or experimenting safely. Typically, you create a new branch from the default branch (main), which gives you a separate working copy of your repository. Once your changes are reviewed or you are satisfied with them, you can merge them back into the main branch.</p>
+</section>
+<section id="forks">
+<h2>Forks<a class="headerlink" href="#forks" title="Link to this heading">#</a></h2>
+<p>Forks create a copy of a repository, allowing you to experiment with changes without affecting the original project. They are commonly used for contributing to open-source projects.</p>
+</section>
+<section id="pull-requests">
+<h2>Pull requests<a class="headerlink" href="#pull-requests" title="Link to this heading">#</a></h2>
+<p>Pull requests allow you to share changes made in branches and get feedback from collaborators. Open a pull request to discuss, review, and refine your changes. You can request specific reviewers and, once approved, merge the pull request into the main branch.</p>
+</section>
+<section id="issues">
+<h2>Issues<a class="headerlink" href="#issues" title="Link to this heading">#</a></h2>
+<p>Issues on GitHub help track enhancements, tasks, or bugs. They organize and prioritize project tasks, allowing clear communication. Use issues to report bugs or suggest features for open-source projects.</p>
+<p>Furthermore, you can connect pull requests and issues to demonstrate the progress of a fix and automatically close the issue when the pull request is merged.</p>
+<p>To learn more about these concepts, read the following resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches">“About Branches”</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo">“Fork a repo”</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">“About Pull Requests”</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">“About Issues”</a></p></li>
+</ul>
+</section>
+<section id="your-user-profile">
+<h2>Your User Profile<a class="headerlink" href="#your-user-profile" title="Link to this heading">#</a></h2>
+<p>Your user profile showcases your work, contributions, and interests. It includes your repositories and a profile README, which can highlight your skills for future employers.</p>
+<p>For more on managing your profile and README, see <a class="reference external" href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme">Managing Your Profile README</a>.</p>
+<p>You can style your issues, pull requests, and files using <a class="reference external" href="https://guides.github.com/features/mastering-markdown/">Markdown</a>. This helps organize information and makes it easier to read. Enhance your content with gifs and images!</p>
+<p>Learn more about GitHub’s markdown syntax at <a class="reference external" href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Basic Writing and Formatting Syntax</a>.</p>
+</section>
+<section id="engaging-with-the-github-community">
+<h2>Engaging with the GitHub community<a class="headerlink" href="#engaging-with-the-github-community" title="Link to this heading">#</a></h2>
+<p>The GitHub community is diverse and inclusive, comprising individuals from various backgrounds and skill levels. You’ll find students like you, professional developers, hobbyists working on open-source projects, and explorers embarking on their own journey into software development. There are numerous ways to interact with the larger GitHub community, but here are three initial avenues to explore.</p>
+<section id="starring-repositories">
+<h3>Starring repositories<a class="headerlink" href="#starring-repositories" title="Link to this heading">#</a></h3>
+<p>If you come across a repository that interests you or you want to keep track of it, consider starring it! Starred repositories are used as signals to surface better recommendations on <a class="reference external" href="http://GitHub.com/explore">GitHub.com/explore</a>. To access your starred repositories, simply visit your user profile.</p>
+<p>For more information on starring repositories, refer to <a class="reference external" href="https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars">“Saving Repositories with Stars”</a>.</p>
+</section>
+<section id="following-users">
+<h3>Following users<a class="headerlink" href="#following-users" title="Link to this heading">#</a></h3>
+<p>You can follow individuals on GitHub to receive notifications about their activities and discover projects within their communities. By following a user, their public GitHub activity will be displayed on your dashboard, allowing you to stay updated on their latest endeavors.</p>
+<p>For further guidance on following users, consult <a class="reference external" href="https://docs.github.com/en/github/getting-started-with-github/following-people">“Following People”</a>.</p>
+</section>
+<section id="browsing-github-explore">
+<h3>Browsing GitHub Explore<a class="headerlink" href="#browsing-github-explore" title="Link to this heading">#</a></h3>
+<p>GitHub Explore serves as an excellent platform to explore and discover new projects, events, and developers.</p>
+<p>Visit the GitHub Explore website at <a class="reference external" href="https://github.com/explore">github.com/explore</a> to enhance your exploration experience. The more you interact with GitHub, the more personalized your Explore view will become.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "dengzeyu/MLE4217_5219_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./orientation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="orientation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Orientation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="setup.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Practical: Setup Programming Environment</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-software-license">Open-Source Software License</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mit-license">MIT License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bsd-license">BSD License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpl-license">GPL License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apache-license">Apache License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creative-commons">Creative Commons</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-github">Git and GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-workflow">GitHub Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repositories">Repositories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additinal-files-in-a-repositories">Additinal Files in a Repositories</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#committing-and-pushing">Committing and pushing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">Branch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forks">Forks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">Issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-user-profile">Your User Profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engaging-with-the-github-community">Engaging with the GitHub community</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starring-repositories">Starring repositories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#following-users">Following users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browsing-github-explore">Browsing GitHub Explore</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
+| © Copyright 2025 Zeyu Deng | <a href='https://matsci.dev'>DENG Group</a>
+</br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
